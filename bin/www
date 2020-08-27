@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+const app = require('../app')
+const port = process.env.PORT || '3000'
+
+app.use(async ctx => {
+  console.log(ctx)
+  ctx.body = 'Hello World'
+})
+
+app.listen('服务器已启动开始监听: localhost:' + port)
